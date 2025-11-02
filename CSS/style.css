@@ -112,6 +112,10 @@ body{
     padding-top: 6rem; 
     padding-left: 7%;
     padding-right: 7%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
 }
 
 .container-konten {
@@ -218,13 +222,8 @@ body{
   .container-konten {
     flex-direction: column; 
   }
-  
-  .box-teks h3 {
-    font-size: 1.8em; 
-  }
-  
-  .box-teks p {
-    font-size: 1rem;
+ .box-teks {
+    text-align: center; 
   }
 
   .box-gambar {
@@ -232,6 +231,7 @@ body{
     margin-top: 2rem;
     width: 100%;
     text-align: center;
+
   }
 
   .box-gambar img {
