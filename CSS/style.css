@@ -171,17 +171,11 @@ body{
   background: rgba(255, 255, 255, 0.15); 
 }
 
-
-
 @media (max-width: 768px) {
-  html {
-    font-size: 100%;
-  }
 
   .navbar .navbar-extra #Menu {
     display: inline-block;
-    color: #fff; 
-    margin-left: 1rem; 
+    color: #fff;
   }
   
   .navbar .navbar-judul {
@@ -192,37 +186,33 @@ body{
     position: absolute;
     top: 100%;
     right: -100%; 
-    
     background-color: rgba(1, 1, 1, 0.9); 
     width: 20rem; 
-    height: 100vh; 
-    transition: right 0.3s ease-in-out; 
+    height: 100vh;
+    transition: right 0.3s ease;
   }
   
   .navbar .navbar-nav.active {
     right: 0;
   }
   
-  
   .navbar .navbar-nav a {
-    display: block; 
+    display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 1.5rem;
   }
   
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.3); 
   }
 
-
+  
   .container-konten {
     flex-direction: column; 
   }
- .box-teks {
+  
+  .box-teks {
     text-align: center; 
   }
 
@@ -230,11 +220,5 @@ body{
     margin-left: 0; 
     margin-top: 2rem;
     width: 100%;
-    text-align: center;
-
-  }
-
-  .box-gambar img {
-    width: 90%; 
   }
 }
