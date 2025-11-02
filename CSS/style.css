@@ -1,0 +1,240 @@
+:root{
+    --primary: #b6895b;
+    --bg:center,#0D5051,#93fd70;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #0d5051, #93fd70);
+    min-height: 100vh;
+}
+
+
+.navbar{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 1.4rem 7%; 
+  background-color: rgba(1, 1, 1, 0.8); 
+  border-bottom: 3px solid #da893d; 
+  position: relative; 
+  z-index: 999;
+    
+   
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+.navbar.scrolled {
+    background-color: rgba(1, 1, 1,0.8);
+    border-bottom: 3px solid var(--primary);
+}
+
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color:sandybrown;
+}
+
+.navbar .navbar-ig a{
+  color: #fff; 
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-ig a:hover {
+  color: #c08a53;
+}
+
+.navbar .navbar-judul h1{
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff; 
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.navbar .navbar-nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+
+
+.navbar .navbar-extra #Menu {
+  display: none; 
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+
+.konten-utama {
+    padding-top: 6rem; 
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.container-konten {
+  display: flex;
+  align-items: center; 
+  gap: 2rem; 
+}
+
+.box-teks {
+  flex: 1; 
+}
+
+.box-teks h3 {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+
+.box-teks p {
+  font-size: 1.0rem;
+  line-height: 1.7; 
+  margin-bottom: 2.5rem;
+}
+
+.tombol {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary); 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.tombol:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.box-gambar {
+  flex: 1;
+  margin-top: 4rem;
+  margin-left: 6.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-gambar img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3);
+}
+.box-gambar:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15); 
+}
+
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+
+  .navbar .navbar-extra #Menu {
+    display: inline-block;
+    color: #fff; 
+    margin-left: 1rem; 
+  }
+  
+  .navbar .navbar-judul {
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%; 
+    
+    background-color: rgba(1, 1, 1, 0.9); 
+    width: 20rem; 
+    height: 100vh; 
+    transition: right 0.3s ease-in-out; 
+  }
+  
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  
+  
+  .navbar .navbar-nav a {
+    display: block; 
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3); 
+  }
+
+
+  .container-konten {
+    flex-direction: column; 
+  }
+  
+  .box-teks h3 {
+    font-size: 1.8em; 
+  }
+  
+  .box-teks p {
+    font-size: 1rem;
+  }
+
+  .box-gambar {
+    margin-left: 0; 
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .box-gambar img {
+    width: 90%; 
+  }
+}

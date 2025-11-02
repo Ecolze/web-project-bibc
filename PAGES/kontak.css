@@ -1,0 +1,176 @@
+:root {
+  --primary: #b6895b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  
+  
+  background: linear-gradient(to bottom, #0d5051, #93fd70);
+  min-height: 100vh;
+  
+  
+  color: #fff;
+}
+
+
+.about .about-ab {
+  display: flex;
+  align-items: center;
+  padding: 1.0rem 7%;
+  
+ 
+  background-color: transparent;
+  border-bottom: none;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.about-ab a {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+.kontena-feedback {
+  padding-top: 6rem; 
+  
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 3rem;
+}
+
+
+.kontena-feedback h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.keterangan {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem; 
+  opacity: 0.9;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.feedback-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+
+.feedback-form {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.feedback-image {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  
+ 
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #eee;
+}
+
+/* Tombol "Submit" */
+.tombol-submit {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary); 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.tombol-submit:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+
+@media (max-width: 768px) {
+  .feedback-container {
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .feedback-form {
+    order: 2; 
+  }
+
+  .feedback-image {
+    order: 1; 
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .feedback-image img {
+    width: 250px; 
+  }
+}

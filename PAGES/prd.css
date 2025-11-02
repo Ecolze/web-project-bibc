@@ -1,0 +1,132 @@
+:root {
+  --primary: #b6895b; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  
+  
+  background: linear-gradient(to bottom, #0d5051, #93fd70);
+  min-height: 100vh;
+  
+  color: #fff;
+}
+
+
+.about .about-ab {
+  display: flex;
+  align-items: center;
+  padding: 1.0rem 7%;
+  
+  
+  background-color: transparent;
+  border-bottom: none;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.about-ab a {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+.kontena-produk {
+  padding-top: 6rem; 
+  
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 3rem;
+  
+}
+
+
+.kontena-produk h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product-grid {
+  display: grid;
+  
+  
+  grid-template-columns: repeat(3, 1fr); 
+  
+  gap: 1.5rem; 
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; 
+}
+
+
+.tombol-info {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tombol-info:hover {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kontena-produk h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,410 @@
+:root {
+ --primary: #b6895b;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ outline: none;
+ border: none;
+ text-decoration: none;
+}
+
+/* ==================================== */
+/* BODY */
+/* ==================================== */
+body {
+ font-family: 'Poppins', sans-serif;
+ 
+ 
+ background: linear-gradient(to bottom, #0d5051, #93fd70);
+ min-height: 100vh;
+ 
+ color: #fff;
+}
+
+/* ==================================== */
+/* HEADER  */
+/* ==================================== */
+
+
+.about .about-ab {
+ display: flex;
+ align-items: center;
+ padding: 1.0rem 7%; 
+ 
+ background-color: transparent; 
+ border-bottom: none; 
+ 
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 9999;
+}
+
+
+.about .about-ab a {
+ color: #fff;
+ font-style: italic;
+ font-weight: 700;
+}
+
+
+/* ==================================== */
+/* KONTEN UTAMA */
+/* ==================================== */
+.kontena {
+ padding-top: 6rem; 
+ 
+ padding-left: 7%;
+ padding-right: 7%;
+}
+
+
+.kontena h1 {
+ color: #fff;
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+/* ==================================== */
+/* LAYOUT TIM (Udah dirapihin) */
+/* ==================================== */
+.kontena-tim {
+ display: flex;
+ flex-direction: column; 
+ align-items: center; 
+ width: 100%;
+ gap: 2rem;
+}
+
+.about-profil {
+ display: flex;
+ justify-content: center;
+}
+
+.anggota-row {
+ display: flex;
+ justify-content: center; 
+ flex-wrap: wrap; 
+ gap: 1.5rem;
+}
+
+/* =========================================== */
+/* PROFIL PERUSAHAAN & JUDUL       */
+/* =========================================== */
+
+.profil-perusahaan {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center; 
+  gap: 2rem;
+  margin-bottom: 3rem; 
+  width: 100%;
+  
+  flex-wrap: wrap; 
+}
+.logo-perusahaan {
+ flex-basis: 200px; 
+ text-align: center;
+}
+
+.logo-perusahaan img {
+ max-width: 100%;
+ height: auto;
+ border-radius: 10px;
+ background: rgba(255,255,255,0.1); 
+ padding: 1rem;
+}
+
+.visi-misi-container {
+ flex: 1; 
+ display: flex;
+ gap: 1.5rem;
+}
+
+.visi, .misi {
+ flex: 1; 
+}
+
+.visi h3, .misi h3 {
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
+ color: var(--primary); 
+ border-bottom: 2px solid var(--primary);
+ padding-bottom: 0.25rem;
+ display: inline-block; 
+}
+
+.visi p, .misi ul {
+ font-size: 1rem;
+ line-height: 1.6;
+ opacity: 0.9;
+}
+
+.misi ul {
+ list-style-position: inside; 
+ padding-left: 5px;
+}
+
+.misi ul li {
+ margin-bottom: 0.5rem;
+}
+
+.keterangan-perusahaan {
+  flex-basis: 100%; 
+  margin-top: 2rem; 
+  
+  border-top: 1px solid rgba(255, 255, 255, 0.3); 
+  padding-top: 1.5rem; 
+}
+
+.keterangan-perusahaan h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.keterangan-perusahaan p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.judul-tim {
+ text-align: center;
+ font-size: 2.5rem;
+ color: #fff;
+ margin-bottom: 2rem;
+ text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+ font-weight: 700;
+}
+
+.struktur-container {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: center; 
+}
+
+
+.judul-struktur {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2.5rem; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-weight: 700;
+}
+
+.judul-struktur span {
+  color: #00ffff; 
+}
+
+
+.struktur-container ul,
+.struktur-container li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.chart-level-2 {
+  margin-top: 3rem; 
+  display: flex; 
+  justify-content: center;
+  gap: 1rem; 
+}
+
+.chart-box {
+  display: inline-flex; 
+  flex-direction: column; 
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  min-width: 180px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.chart-box:hover {
+  transform: scale(1.05);
+}
+
+.chart-box strong {
+  font-size: 1.1rem;
+}
+
+.chart-box span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-style: italic;
+  font-weight: 400; 
+}
+
+
+.chart-box.ceo {
+  background-color: #f39c12; 
+  border-color: #e67e22;
+}
+
+.chart-box.manager {
+  background-color: #f1c40f; 
+  border-color: #f39c12;
+}
+
+.ketua, .Anggota {
+   background-color: rgba(255, 255, 255, 0.1); 
+   border-radius: 10px;
+   padding: 1.5rem;
+   text-align: center;
+   color: #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   transition: all 0.3s ease-in-out;
+}
+
+.ketua:hover, .Anggota:hover {
+ transform: translateY(-10px) scale(1.03);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+ background: rgba(255, 255, 255, 0.15); 
+}
+
+
+.ketua img, .Anggota img {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ object-fit: cover;
+ margin-bottom: 1rem;
+ border: 3px solid #fff;
+}
+
+.ketua h3, .Anggota h3 {
+ font-size: 1.4rem;
+ margin-bottom: 0.5rem;
+}
+
+.ketua p, .Anggota p {
+ font-size: 1rem;
+ font-style: italic;
+ opacity: 0.8;
+}
+
+
+.about-profil .ketua {
+ width: 300px;
+}
+
+.anggota-row .Anggota {
+ width: 250px;
+}
+
+.social-links {
+ margin-top: 1rem; 
+ display: flex;
+ justify-content: center;
+ gap: 1.5rem; 
+}
+
+.social-links a {
+ color: #fff; 
+ transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+ color: var(--primary); 
+ transform: scale(1.2); 
+}
+
+
+
+@media (max-width: 768px) {
+.about-profil .ketua {
+   width: 250px; 
+}
+
+
+.profil-perusahaan {
+  flex-direction: column; 
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+ .logo-perusahaan {
+  flex-basis: auto; 
+  width: 150px; 
+  margin-bottom: 0;
+ }
+ 
+ .visi-misi-container {
+  flex-direction: column; 
+  gap: 1.5rem;
+  width: 100%;
+  text-align: center; 
+ }
+
+ .visi h3, .misi h3 {
+  display: block; 
+ }
+
+ .judul-tim {
+  font-size: 2rem;
+ }
+.judul-struktur {
+  font-size: 2rem;
+}
+
+.chart-level-2 {
+  flex-direction: column;
+  align-items: center; 
+  gap: 1rem; 
+  margin-top: 1.5rem; 
+}
+
+.chart-level-2::before {
+  display: none;
+}
+
+
+.chart-level-2 > li::before {
+  top: -1.5rem;
+  height: 1.5rem;
+}
+
+.chart-level-2 > li {
+  padding-top: 1.5rem;
+}
+} 
+
+@keyframes fadeIn {
+ from {
+ opacity: 0;
+ transform: translateY(30px); 
+ }
+ to {
+ opacity: 1;
+ transform: translateY(0);
+ }
+}
+
+.card-anim {
+ opacity: 0; 
+ 
+ 
+ animation: fadeIn 0.6s ease-out forwards;
+}
