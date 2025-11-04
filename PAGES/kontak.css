@@ -65,6 +65,10 @@ body {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
+.judul-feedback span{
+  color: #00ffff;
+}
+
 .keterangan {
   text-align: center;
   font-size: 1.1rem;

@@ -5,28 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback</title>
   
-  <!-- Pastiin link ke file CSS 'kontak.css' -->
+
   <link rel="stylesheet" href="kontak.css">
   
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ======================== -->
-  <!-- 1. BAGIAN HEADER (Transparan) -->
-  <!-- ======================== -->
+
   <header class="about">
     <nav class="about-ab">
       <a href="../index.html">Back</a>
     </nav>
   </header>
 
-  <!-- ======================== -->
-  <!-- 2. BAGIAN KONTEN (Form)  -->
-  <!-- ======================== -->
   <main class="kontena-feedback">
     
-    <h2>Feed Back</h2>
+    <h2 class="judul-feedback">Feed <span>Back</span></h2>
 
     <p class="keterangan">
       Kami sangat menghargai feedback Anda. Silakan isi form di bawah ini.
@@ -34,55 +29,38 @@
 
     <div class="feedback-container">
 
-      <!-- KOLOM KIRI: FORM -->
       
-      <!-- 
-        ===============================================================
-        PERUBAHANNYA DI SINI:
-        1. Ganti 'action' dengan URL Formspree lo.
-        2. Tambahin 'method="POST"'.
-        ===============================================================
-      -->
       <form action="https://formspree.io/f/xqagpwjz" method="POST" class="feedback-form">
         
         <div class="form-group">
           <label for="full-name">Full Name</label>
-          <!-- 
-            PENTING: 'name' harus diisi 
-            (name="full-name" udah bener) 
-          -->
+          
           <input type="text" id="full-name" name="full-name" required>
         </div>
         
         <div class="form-group">
           <label for="email">Email Address</label>
-          <!-- 
-            PENTING: 'name' harus diisi 
-            (name="email" udah bener) 
-          -->
+         
           <input type="email" id="email" name="email" required>
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <!-- 
-            PENTING: 'name' harus diisi 
-            (name="message" udah bener) 
-          -->
+          
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         
-        <!-- Tombol submit-nya (tag <a> di dalemnya udah dihapus) -->
+        
         <button type="submit" class="tombol-submit">Submit</button>
 
       </form>
 
-      <!-- KOLOM KANAN: GAMBAR -->
+     
       <div class="feedback-image">
         <img src="../IMG/Gemini_Generated_Image_95nakg95nakg95na.png" alt="Gambar Karakter Feedback">
       </div>
 
-    </div> <!-- Penutup .feedback-container -->
+    </div> 
   </main>
   <script>
       feather.replace();
