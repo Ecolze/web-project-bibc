@@ -23,14 +23,9 @@ body {
 
 
 .about .about-ab {
-  display: flex;
-  align-items: center;
+  display: flex; /* Biar rapi aja */
   padding: 1.0rem 7%;
-  
-  
-  background-color: transparent;
-  border-bottom: none;
-  
+  background-color: transparent; 
   position: fixed;
   top: 0;
   left: 0;
@@ -38,13 +33,32 @@ body {
   z-index: 9999;
 }
 
-.about-ab a {
+.about .about-ab a {
   color: #fff;
   font-style: italic;
   font-size: 1.2rem;
   font-weight: 700;
+  display: inline-block;
+  position: relative;
+  transition: color 0.2s linear;
 }
 
+.about .about-ab a:hover {
+  color: var(--primary);
+}
+
+.about .about-ab a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.2rem; 
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0); 
+  transition: 0.2s linear;
+}
+
+.about .about-ab a:hover::after {
+   transform: scaleX(1);
+}
 
 .kontena-produk {
   padding-top: 6rem; 
