@@ -135,7 +135,7 @@ body {
 .visi h3, .misi h3 {
  font-size: 1.5rem;
  margin-bottom: 0.5rem;
- color: var(--primary); 
+ color: #6c3c0c ; 
  border-bottom: 2px solid var(--primary);
  padding-bottom: 0.25rem;
  display: inline-block; 
@@ -167,7 +167,7 @@ body {
 .keterangan-perusahaan h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--primary);
+  color: #6c3c0c ;
   border-bottom: 2px solid var(--primary);
   padding-bottom: 0.25rem;
   display: inline-block;
