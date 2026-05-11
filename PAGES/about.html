@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <title>Tentang Kita</title>
+    <title id="page-title">Tentang Kita</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="abouts.css">
@@ -10,8 +11,10 @@
 <body>
 
   <header class="about">
-    <nav class="about-ab">
-      <a href="../index.html">Back</a>
+    <nav class="about-ab" style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+      <a href="../index.html" id="text-back">Back</a>
+      
+      <button id="langToggle" onclick="toggleLang()" style="background-color: transparent; border: 2px solid #333; color: #333; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-weight: bold; font-family: 'Poppins', sans-serif;">EN</button>
     </nav>
   </header> 
   
@@ -25,86 +28,82 @@
       
       <div class="visi-misi-container">
         <div class="visi">
-          <h3>Visi</h3>
-          <p>
+          <h3 id="text-visi-title">Visi</h3>
+          <p id="text-visi-desc">
            Menjadi perusahaan minuman herbal modern berbasis kearifan lokal Madura yang berkelanjutan, dengan menghadirkan produk sehat, ramah lingkungan, dan memberikan dampak nyata bagi kesejahteraan masyarakat.
           </p>
         </div>
         <div class="misi">
-          <h3>Misi</h3>
-          <ul>
+          <h3 id="text-misi-title">Misi</h3>
+          <ul id="text-misi-list">
             <li>Menghadirkan inovasi produk herbal sehat yang praktis, alami, dan aman dikonsumsi setiap hari untuk mendukung gaya hidup modern yang lebih baik</li>
             <li>Mendukung pemberdayaan petani dan UMKM lokal Madura melalui kemitraan penyediaan bahan baku rempah secara berkelanjutan</li>
             <li>Melestarikan warisan budaya jamu Nusantara, khususnya rempah khas Madura, melalui modernisasi bentuk penyajian dan edukasi konsumen</li>
             <li>Mengurangi jejak lingkungan dalam proses produksi, termasuk penggunaan kemasan yang ramah lingkungan dan pemanfaatan sisa rempah menjadi produk yang bernilai</li>
             <li>Memperkuat pemasaran digital dan distribusi nasional untuk memperluas akses masyarakat terhadap minuman herbal berkualitas tinggi</li>
             <li>Membangun bisnis yang tangguh secara ekonomi melalui efisiensi biaya, peningkatan kualitas, dan inovasi yang berkelanjutan sebagai daya saing jangka panjang</li>
-            <li>Berkomitmen pada praktik bisnis yang beretika, transparan, dan memberikan manfaat sosial, ekonomi, serta lingkungan bagi seluruh pemangku kepentingan</li>
+            <li>Berkomitmen pada praktik bisnis yang beretika, transparan, dan memberikan manfaat sosial, ekonomi, serta lingkungan bagi seluruh pemangku kepentingan</li>
           </ul>
         </div>
       </div>
       <div class="keterangan-perusahaan">
-        <h3>Profil Singkat</h3>
-        <p>
+        <h3 id="text-profile-title">Profil Singkat</h3>
+        <p id="text-profile-desc">
           Usaha mikro inovatif dari mahasiswa Universitas Trunojoyo Madura yang menghadirkan jamu khas Madura dalam bentuk kantong celup praktis. 
           Menggunakan rempah lokal seperti jahe merah, temulawak, dan sereh wangi, 
           BherRempah menyasar generasi muda dan pekerja urban dengan varian rasa kekinian dan kemasan ramah lingkungan. 
           Berbasis di Bangkalan, usaha ini menggabungkan tradisi, kesehatan, dan gaya hidup modern.
         </p>
-
       </div>
 
-    </div> <div class="struktur-container card-anim" style="animation-delay: 0.15s;">
-      
-      <h2 class="judul-struktur">Struktur <span>Perusahaan</span></h2>
+    </div> 
+
+    <div class="struktur-container card-anim" style="animation-delay: 0.15s;">
+      <h2 class="judul-struktur" id="text-struct-title">Struktur <span>Perusahaan</span></h2>
       
       <ul class="chart-level-1">
         <li>
-          <!-- KETUA: Ari Akbar -->
           <div class="chart-box ceo">
-            <span class="label-posisi">Ketua</span>
+            <span class="label-posisi text-label-ketua">Ketua</span>
             <strong>CEO</strong>
             <span>(Ari Akbar)</span>
           </div>
           
           <ul class="chart-level-2">
             <li>
-              <!-- ANGGOTA 1: Bernadus Sinurat -->
               <div class="chart-box manager">
-                <span class="label-posisi">Anggota 1</span>
-                <strong>Manajemen Keuangan</strong>
+                <span class="label-posisi text-label-anggota1">Anggota 1</span>
+                <strong id="role-fin">Manajemen Keuangan</strong>
                 <span>(Bernadus Sinurat)</span>
               </div>
             </li>
             <li>
-              <!-- ANGGOTA 2: Achmad Faisal -->
               <div class="chart-box manager">
-                <span class="label-posisi">Anggota 2</span>
-                <strong>Manajemen Operasional</strong>
+                <span class="label-posisi text-label-anggota2">Anggota 2</span>
+                <strong id="role-ops">Manajemen Operasional</strong>
                 <span>(Achmad Faisal Al Farizy)</span>
               </div>
             </li>
             <li>
-              <!-- ANGGOTA 3: Umroatus Soleha -->
               <div class="chart-box manager">
-                <span class="label-posisi">Anggota 3</span>
-                <strong>Manajemen Pemasaran</strong>
+                <span class="label-posisi text-label-anggota3">Anggota 3</span>
+                <strong id="role-mkt">Manajemen Pemasaran</strong>
                 <span>(Umroatus Soleha)</span>
               </div>
             </li>
           </ul>
         </li>
       </ul>
-      
-    </div> <h2 class="judul-tim card-anim" style="animation-delay: 0.2s;">Tim <span>Kami</span></h2>
+    </div> 
+
+    <h2 class="judul-tim card-anim" style="animation-delay: 0.2s;" id="text-team-title">Tim <span>Kami</span></h2>
 
     <div class="kontena-tim">
-    
       <div class="about-profil">
         <div class="ketua card-anim" style="animation-delay: 0.3s;">
           <img src="../IMG/WhatsApp Image 2025-11-01 at 17.55.27_ea3a5a12.jpg" alt="Foto Ketua Tim">
           <h3>Ari Akbar</h3>
-          <p>Ketua Tim</p>
+          <p class="text-label-ketua">Ketua Tim</p>
           <div class="social-links">
             <a href="https://www.instagram.com/ariari959?utm_source=qr&igsh=MXhqMDgyOG9yM3gzbw== " target="_blank"><i data-feather="instagram"></i></a>
           </div>
@@ -112,11 +111,10 @@
       </div>
       
       <div class="anggota-row">
-      
         <div class="Anggota card-anim" style="animation-delay: 0.5s;">
           <img src="../IMG/WhatsApp Image 2025-11-01 at 18.10.35_4e062917.jpg" alt="Foto Anggota 1">
           <h3>Bernadus Sinurat</h3>
-          <p>Anggota 1</p>
+          <p class="text-label-anggota1">Anggota 1</p>
           <div class="social-links">
             <a href="https://www.instagram.com/its_ardusss?igsh=MTg2MDVjdG9wMnc2dw==" target="_blank"><i data-feather="instagram"></i></a>
           </div>
@@ -125,7 +123,7 @@
         <div class="Anggota card-anim" style="animation-delay: 0.7s;">
           <img src="../IMG/WhatsApp Image 2025-11-01 at 19.00.59_3770392a.jpg" alt="Foto Anggota 2">
           <h3>Achmad Faisal Al Farizy</h3>
-          <p>Anggota 2</p>
+          <p class="text-label-anggota2">Anggota 2</p>
           <div class="social-links">
             <a href="https://www.instagram.com/alpharizy__?igsh=MWl0bnZyM3ZoZGt0NA==" target="_blank"><i data-feather="instagram"></i></a>
           </div>
@@ -134,19 +132,116 @@
         <div class="Anggota card-anim" style="animation-delay: 0.9s;">
           <img src="../IMG/WhatsApp Image 2025-11-01 at 19.10.49_a1d2a080.jpg" alt="Foto Anggota 3">
           <h3>Umroatus Soleha</h3>
-          <p>Anggota 3</p>
+          <p class="text-label-anggota3">Anggota 3</p>
           <div class="social-links">
             <a href="https://www.instagram.com/u.lhaa_?igsh=MW5iaGpzaDFqd2Zl" target="_blank"><i data-feather="instagram"></i></a>
           </div>
         </div>
-
       </div> 
-
     </div> 
   </main> 
   
   <script>
     feather.replace();
+
+    const translations = {
+        id: {
+            back: "Kembali",
+            visiTitle: "Visi",
+            visiDesc: "Menjadi perusahaan minuman herbal modern berbasis kearifan lokal Madura yang berkelanjutan...",
+            misiTitle: "Misi",
+            misiList: [
+                "Menghadirkan inovasi produk herbal sehat yang praktis...",
+                "Mendukung pemberdayaan petani dan UMKM lokal Madura...",
+                "Melestarikan warisan budaya jamu Nusantara...",
+                "Mengurangi jejak lingkungan dalam proses produksi...",
+                "Memperkuat pemasaran digital dan distribusi nasional...",
+                "Membangun bisnis yang tangguh secara ekonomi...",
+                "Berkomitmen pada praktik bisnis yang beretika..."
+            ],
+            profileTitle: "Profil Singkat",
+            profileDesc: "Usaha mikro inovatif dari mahasiswa Universitas Trunojoyo Madura...",
+            structTitle: "Struktur <span>Perusahaan</span>",
+            teamTitle: "Tim <span>Kami</span>",
+            labelKetua: "Ketua",
+            labelAnggota1: "Anggota 1",
+            labelAnggota2: "Anggota 2",
+            labelAnggota3: "Anggota 3",
+            roleFin: "Manajemen Keuangan",
+            roleOps: "Manajemen Operasional",
+            roleMkt: "Manajemen Pemasaran",
+            toggleText: "EN"
+        },
+        en: {
+            back: "Back",
+            visiTitle: "Vision",
+            visiDesc: "To become a sustainable modern herbal beverage company based on Madurese local wisdom, by presenting healthy, eco-friendly products that provide a real impact on community welfare.",
+            misiTitle: "Mission",
+            misiList: [
+                "Providing innovative, practical, and safe healthy herbal products for daily consumption.",
+                "Supporting the empowerment of local Madurese farmers and MSMEs through sustainable partnerships.",
+                "Preserving the cultural heritage of Indonesian Jamu through modernization.",
+                "Reducing environmental footprint in the production process.",
+                "Strengthening digital marketing and national distribution.",
+                "Building an economically resilient business through continuous innovation.",
+                "Committed to ethical, transparent, and beneficial business practices."
+            ],
+            profileTitle: "Short Profile",
+            profileDesc: "An innovative micro-business by students of University of Trunojoyo Madura presenting typical Madurese jamu in practical teabag form. Combining tradition, health, and modern lifestyle.",
+            structTitle: "Company <span>Structure</span>",
+            teamTitle: "Our <span>Team</span>",
+            labelKetua: "Lead",
+            labelAnggota1: "Member 1",
+            labelAnggota2: "Member 2",
+            labelAnggota3: "Member 3",
+            roleFin: "Financial Management",
+            roleOps: "Operational Management",
+            roleMkt: "Marketing Management",
+            toggleText: "ID"
+        }
+    };
+
+    // Fungsi Sinkronisasi
+    let currentLang = localStorage.getItem('lang') || 'id';
+
+    function applyTranslation() {
+        const lang = currentLang;
+        document.getElementById("langToggle").innerText = translations[lang].toggleText;
+        document.getElementById("text-back").innerText = translations[lang].back;
+        document.getElementById("text-visi-title").innerText = translations[lang].visiTitle;
+        document.getElementById("text-visi-desc").innerText = translations[lang].visiDesc;
+        document.getElementById("text-misi-title").innerText = translations[lang].misiTitle;
+        document.getElementById("text-profile-title").innerText = translations[lang].profileTitle;
+        document.getElementById("text-profile-desc").innerText = translations[lang].profileDesc;
+        document.getElementById("text-struct-title").innerHTML = translations[lang].structTitle;
+        document.getElementById("text-team-title").innerHTML = translations[lang].teamTitle;
+        
+        // Roles
+        document.getElementById("role-fin").innerText = translations[lang].roleFin;
+        document.getElementById("role-ops").innerText = translations[lang].roleOps;
+        document.getElementById("role-mkt").innerText = translations[lang].roleMkt;
+
+        // Labels (pake class karena muncul berkali-kali)
+        document.querySelectorAll(".text-label-ketua").forEach(el => el.innerText = translations[lang].labelKetua);
+        document.querySelectorAll(".text-label-anggota1").forEach(el => el.innerText = translations[lang].labelAnggota1);
+        document.querySelectorAll(".text-label-anggota2").forEach(el => el.innerText = translations[lang].labelAnggota2);
+        document.querySelectorAll(".text-label-anggota3").forEach(el => el.innerText = translations[lang].labelAnggota3);
+
+        // Update Misi List
+        const listItems = document.querySelectorAll("#text-misi-list li");
+        translations[lang].misiList.forEach((text, index) => {
+            if(listItems[index]) listItems[index].innerText = text;
+        });
+    }
+
+    function toggleLang() {
+        currentLang = currentLang === "id" ? "en" : "id";
+        localStorage.setItem('lang', currentLang); // Simpan pilihan ke browser
+        applyTranslation();
+    }
+
+    // Jalankan saat halaman dibuka
+    window.onload = applyTranslation;
   </script>
   <script src="../JS/script.js"></script>
 

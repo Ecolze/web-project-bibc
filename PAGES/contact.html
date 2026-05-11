@@ -1,71 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback</title>
+  <title id="page-title">Feedback</title>
   
-
   <link rel="stylesheet" href="kontak.css">
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
-
   <header class="about">
-    <nav class="about-ab">
-      <a href="../index.html">Back</a>
+    <nav class="about-ab" style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+      <a href="../index.html" id="text-back">Back</a>
+      
+      <button id="langToggle" onclick="toggleLang()" style="background-color: transparent; border: 2px solid #333; color: #333; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-weight: bold; font-family: 'Poppins', sans-serif;">EN</button>
     </nav>
   </header>
 
   <main class="kontena-feedback">
     
-    <h2 class="judul-feedback">Feed <span>Back</span></h2>
+    <h2 class="judul-feedback" id="text-heading">Feed <span>Back</span></h2>
 
-    <p class="keterangan">
+    <p class="keterangan" id="text-desc">
       Kami sangat menghargai feedback Anda. Silakan isi form di bawah ini.
     </p>
 
     <div class="feedback-container">
-
       
       <form action="https://formspree.io/f/xqagpwjz" method="POST" class="feedback-form">
         
         <div class="form-group">
-          <label for="full-name">Full Name</label>
-          
+          <label for="full-name" id="label-name">Full Name</label>
           <input type="text" id="full-name" name="full-name" required>
         </div>
         
         <div class="form-group">
-          <label for="email">Email Address</label>
-         
+          <label for="email" id="label-email">Email Address</label>
           <input type="email" id="email" name="email" required>
         </div>
 
         <div class="form-group">
-          <label for="message">Message</label>
-          
+          <label for="message" id="label-message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         
-        
-        <button type="submit" class="tombol-submit">Submit</button>
+        <button type="submit" class="tombol-submit" id="text-submit">Submit</button>
+
+        <div class="whatsapp-contact" style="margin-top: 25px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center;">
+          <p id="text-wa-desc" style="margin-bottom: 15px; font-size: 0.9rem;">Atau hubungi kami langsung via WhatsApp:</p>
+          
+          <a href="https://wa.me/6281615981150" target="_blank" class="tombol-wa" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #25D366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; width: 100%; box-sizing: border-box;">
+            <i data-feather="message-circle"></i> <span id="text-wa-btn">Chat WhatsApp</span>
+          </a>
+        </div>
 
       </form>
 
-     
       <div class="feedback-image">
         <img src="../IMG/Gemini_Generated_Image_95nakg95nakg95na.png" alt="Gambar Karakter Feedback">
       </div>
 
     </div> 
   </main>
+
   <script>
-      feather.replace();
-    </script>
-    <script src="../JS/script.js"></script>
+    // === SCRIPT UNTUK FITUR DUA BAHASA (SINKRON) ===
+    const translations = {
+        id: {
+            title: "Umpan Balik",
+            back: "Kembali",
+            heading: "Umpan <span>Balik</span>",
+            desc: "Kami sangat menghargai umpan balik Anda. Silakan isi form di bawah ini.",
+            labelName: "Nama Lengkap",
+            labelEmail: "Alamat Email",
+            labelMessage: "Pesan",
+            submit: "Kirim",
+            waDesc: "Atau hubungi kami langsung via WhatsApp:",
+            waBtn: "Chat WhatsApp",
+            toggleText: "EN"
+        },
+        en: {
+            title: "Feedback",
+            back: "Back",
+            heading: "Feed <span>Back</span>",
+            desc: "We highly appreciate your feedback. Please fill out the form below.",
+            labelName: "Full Name",
+            labelEmail: "Email Address",
+            labelMessage: "Message",
+            submit: "Submit",
+            waDesc: "Or contact us directly via WhatsApp:",
+            waBtn: "Chat WhatsApp",
+            toggleText: "ID"
+        }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'id';
+
+    function applyTranslation() {
+        document.getElementById("page-title").innerText = translations[currentLang].title;
+        document.getElementById("langToggle").innerText = translations[currentLang].toggleText;
+        document.getElementById("text-back").innerText = translations[currentLang].back;
+        document.getElementById("text-heading").innerHTML = translations[currentLang].heading; 
+        document.getElementById("text-desc").innerText = translations[currentLang].desc;
+        document.getElementById("label-name").innerText = translations[currentLang].labelName;
+        document.getElementById("label-email").innerText = translations[currentLang].labelEmail;
+        document.getElementById("label-message").innerText = translations[currentLang].labelMessage;
+        document.getElementById("text-submit").innerText = translations[currentLang].submit;
+        document.getElementById("text-wa-desc").innerText = translations[currentLang].waDesc;
+        document.getElementById("text-wa-btn").innerText = translations[currentLang].waBtn;
+    }
+
+    function toggleLang() {
+        currentLang = currentLang === "id" ? "en" : "id";
+        localStorage.setItem('lang', currentLang);
+        applyTranslation();
+    }
+
+    window.onload = () => {
+        applyTranslation();
+        feather.replace(); // Aktifin icon setelah bahasa diload
+    };
+  </script>
+  <script src="../JS/script.js"></script>
 </body>
 </html>
-
